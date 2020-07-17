@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/cate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#86E57F"
+        android:text="몽골 >"
+        ></TextView>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cate"
+        app:layout_constraintLeft_toLeftOf="@id/cate"
+        android:layout_marginTop="20dp"
+        android:text="3월 8일 ~ 4월 12일 몽골 같이가요~"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        ></TextView>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"></ImageView>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img"
+        app:layout_constraintTop_toTopOf="@id/img"
+        android:text="이기세"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        ></TextView>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="채팅"
+        android:textSize="8dp"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintTop_toTopOf="@id/name"
+        ></Button>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        android:text="2020.03.06. 20:57"
+        android:layout_marginTop="5dp"
+        ></TextView>
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/date"
+        app:layout_constraintTop_toTopOf="@id/date"
+        android:text="조회 0"
+        ></TextView>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginTop="20dp"
+        android:background="#BDBDBD"></View>
+    <ImageView
+        android:id="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:src="@drawable/ic_restaurant_black_24dp"></ImageView>
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/food"
+        android:layout_marginTop="10dp"
+        android:text="밤하늘이 얼마나 예쁘게요?!! 반짝반짝 빛나는 별들을 볼수있는 기회에요 채팅주세요!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000"></TextView>
+    <View
+        android:id="@+id/vvv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BDBDBD"
+        app:layout_constraintTop_toBottomOf="@id/content"
+        android:layout_marginTop="30dp"></View>
+
+    <TextView
+        android:id="@+id/reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글 0 >"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/vvv"
+        android:layout_marginTop="20dp"></TextView>
+    <ImageView
+        android:id="@+id/mg2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        app:layout_constraintTop_toBottomOf="@id/reply"
+        app:layout_constraintLeft_toLeftOf="@id/title"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/mg2"
+        app:layout_constraintBottom_toBottomOf="@id/mg2"
+        app:layout_constraintLeft_toRightOf="@id/mg2"
+        android:layout_marginLeft="10dp"
+        android:text="댓글을 입력해주세요"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

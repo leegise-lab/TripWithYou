@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="category">
+        <item>랜드마크</item>
+        <item>쇼핑</item>
+        <item>야외 활동</item>
+        <item>전시관</item>
+        <item>기타</item>
+    </string-array>
+</resources>
