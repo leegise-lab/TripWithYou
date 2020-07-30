@@ -4,7 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface Retrofit_picture_change {
+public interface Retrofit_profilePicChange {
     //프사 구현
 
     // 프로필 이미지 보내기

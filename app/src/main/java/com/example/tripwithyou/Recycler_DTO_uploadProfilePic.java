@@ -1,11 +1,11 @@
 package com.example.tripwithyou;
 
 
-public class Recycler_DTO_upload {
+public class Recycler_DTO_uploadProfilePic {
 
     private String img;
 
-    public Recycler_DTO_upload(String img) {
+    public Recycler_DTO_uploadProfilePic(String img) {
         this.img = img;
     }
 

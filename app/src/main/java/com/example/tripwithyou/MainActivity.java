@@ -16,17 +16,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
-//    final Fragment fragmentHome = new fragment_home();
     final Fragment fragmentBoard = new Fragment_board();
-    final Fragment fragmentHome = new Sample();
+    final Fragment fragmentHome = new Fragment_home();
     final Fragment fragmentMessage = new Fragment_message();
     final Fragment fragmentProfile = new Fragment_profile();
-//    Fragment fragmentenjoy = new fragment_enjoy();
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
     Fragment active = fragmentHome;
-
-
 
     //초기화면 설정(다른애들 다 숨기고 home화면만 띄우겠다)
     @Override
@@ -34,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.main_activity);
 
-
-
+        //바텀 네비게이션바 세팅
         BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.bottom_bar);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -141,22 +136,16 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     super.onBackPressed();
                     Log.e("!!!", "onBackPressed : finish, killProcess/종료");
-                    //앱 완전꺼지는거
-//                    finish();
-//                    android.os.Process.killProcess(android.os.Process.myPid());
+                    //어플 완전히 종료
+                    finish();
+                    android.os.Process.killProcess(android.os.Process.myPid());
                     //꺼진것처럼 보이는거
-                    Intent homeIntent = new Intent(Intent.ACTION_MAIN);
-                    homeIntent.addCategory(Intent.CATEGORY_HOME);
-                    homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(homeIntent);
+//                    Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+//                    homeIntent.addCategory(Intent.CATEGORY_HOME);
+//                    homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                    startActivity(homeIntent);
                 }
             }
         }
     }
-
-//    public void moveenjoy(){
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction().addToBackStack(null);
-//        transaction.add(R.id.container,fragmentenjoy);
-//        transaction.commit();
-//    }
 }

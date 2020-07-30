@@ -24,12 +24,12 @@
         <activity android:name=".Search_city"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".Fragment_hotel"/>
-        <activity android:name=".Sample" />
         <activity android:name=".Login_choice"/>
         <activity android:name=".Login_email"/>
         <activity android:name=".Sign_up"/>
         <activity android:name=".Edit_profile" android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
         <activity android:name=".Fragment_enjoy"/>
+        <activity android:name=".Chatting" />
         <activity android:name=".Upload_enjoy" android:windowSoftInputMode="adjustResize"/>
     </application>
 

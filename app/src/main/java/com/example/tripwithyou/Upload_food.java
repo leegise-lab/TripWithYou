@@ -54,12 +54,12 @@ public class Upload_food extends AppCompatActivity {
     String check = "x";
     private File tempFile;
     Adapter_upload_pic adapter;
-    ArrayList<Recycler_DTO_upload> datalist = new ArrayList<>();
+    ArrayList<Recycler_DTO_uploadProfilePic> datalist = new ArrayList<>();
 
     private static final int PICK_FROM_ALBUM = 1;
 
     final String BASE_URL = "http://13.125.246.30/";
-    retrofit_uploadEnjoy retrofitInterface;
+    Retrofit_uploadEnjoy retrofitInterface;
     private Call<Retrofit_result> userList;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -185,9 +185,9 @@ public class Upload_food extends AppCompatActivity {
                         String path = String.valueOf(uri);
                         Log.d("path", path);
                         //리사이클러뷰에 선택한 이미지 넣음
-                        Recycler_DTO_upload dto = new Recycler_DTO_upload(path);
+                        Recycler_DTO_uploadProfilePic dto = new Recycler_DTO_uploadProfilePic(path);
                         Log.d("dto", dto+"");
-                        datalist.add(new Recycler_DTO_upload(path));
+                        datalist.add(new Recycler_DTO_uploadProfilePic(path));
                         adapter.notifyDataSetChanged();
                         check = "ok";
 //                        Cursor cursor = null;
@@ -383,7 +383,7 @@ public class Upload_food extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create(mGson))
                 .build();
 
-        retrofitInterface = mRetrofit.create(retrofit_uploadEnjoy.class);
+        retrofitInterface = mRetrofit.create(Retrofit_uploadEnjoy.class);
     }
 
     protected void calluserlist() {

@@ -4,7 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface retrofit_home {
+public interface Retrofit_home {
 
     //PHP에 전송하는 부분
     @GET("home.php")

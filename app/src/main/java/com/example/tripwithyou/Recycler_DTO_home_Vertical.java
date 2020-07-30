@@ -1,6 +1,6 @@
 package com.example.tripwithyou;
 
-public class TestDto {
+public class Recycler_DTO_home_Vertical {
 
     private String country;
     private String location;

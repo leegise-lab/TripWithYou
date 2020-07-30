@@ -4,7 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface retrofit_uploadEnjoy {
+public interface Retrofit_uploadEnjoy {
 
     //즐길거리 정보 등록
     @GET("sample.php")

@@ -56,7 +56,7 @@ public class Edit_profile extends AppCompatActivity {
     final String BASE_URL = "http://13.125.246.30/";
     private Call<Retrofit_result> userList;
     private Retrofit mRetrofit;
-    private Retrofit_picture_change retrofitInterface;
+    private Retrofit_profilePicChange retrofitInterface;
     private Gson mGson;
     long t = System.currentTimeMillis();
     String img_url, mCurrentPhotoPath, savedPhoto;
@@ -390,7 +390,7 @@ public class Edit_profile extends AppCompatActivity {
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(mGson))
                 .build();
-        retrofitInterface = mRetrofit.create(Retrofit_picture_change.class);
+        retrofitInterface = mRetrofit.create(Retrofit_profilePicChange.class);
     }
     protected void calluserlist()  {
         SharedPreferences sp = getSharedPreferences("user",MODE_PRIVATE);

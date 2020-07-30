@@ -1,13 +1,11 @@
 package com.example.tripwithyou;
 
 import android.content.Context;
-import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,7 +16,7 @@ import java.util.ArrayList;
 public class Adapter_upload_pic extends RecyclerView.Adapter<Adapter_upload_pic.MyViewHolder> {
 
     private Context context;
-    private ArrayList<Recycler_DTO_upload> datalist = new ArrayList<>();
+    private ArrayList<Recycler_DTO_uploadProfilePic> datalist = new ArrayList<>();
 
     @Override
     //뷰홀더 생성
@@ -33,7 +31,7 @@ public class Adapter_upload_pic extends RecyclerView.Adapter<Adapter_upload_pic.
     @Override
     public void onBindViewHolder(Adapter_upload_pic.MyViewHolder holder, int position) {
         //각 위치에 문자열 세팅
-        Recycler_DTO_upload data = datalist.get(position);
+        Recycler_DTO_uploadProfilePic data = datalist.get(position);
 //        holder.image.setImageURI(Uri.parse(data.getImg()));
         Log.d("onBindView","실행");
         Glide.with(holder.itemView.getContext()).load(data.getImg()).into(holder.image);
@@ -60,7 +58,7 @@ public class Adapter_upload_pic extends RecyclerView.Adapter<Adapter_upload_pic.
     }
 
     //생성자
-    public Adapter_upload_pic(Context context, ArrayList<Recycler_DTO_upload> datalist) {
+    public Adapter_upload_pic(Context context, ArrayList<Recycler_DTO_uploadProfilePic> datalist) {
         this.context = context;
         this.datalist = datalist;
     }

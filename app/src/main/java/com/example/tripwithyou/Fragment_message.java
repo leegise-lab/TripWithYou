@@ -21,4 +21,6 @@ public class Fragment_message extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_message, container, false);
     }
+
+    //클릭이벤트 넣어서 챗부분으로 넘어가게 하기
 }
