@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:background="#79ABFF">
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/ic_launcher_round" />
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/profile_pic"
+        android:layout_marginLeft="10dp"
+        android:textSize="17dp"
+        android:text="            "
+        android:textColor="#242424"/>
+    <TextView
+        android:id="@+id/receive_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"
+        app:layout_constraintLeft_toLeftOf="@id/profile_name"
+        android:maxWidth="200dp"
+        android:text="            "
+        android:background="#EAEAEA"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#242424"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/receive_chat"
+        app:layout_constraintBottom_toBottomOf="@id/receive_chat"
+        android:layout_marginLeft="5dp"
+        android:text="                         " />
+    <TextView
+        android:id="@+id/sent_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxWidth="250dp"
+        android:text=""
+        android:background="#EAEAEA"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#242424" />
+    <TextView
+        android:id="@+id/sent_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/sent_msg"
+        app:layout_constraintBottom_toBottomOf="@id/sent_msg"
+        android:layout_marginRight="5dp"
+        android:text="                 "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="receive_chat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="ㅇㅇ"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
